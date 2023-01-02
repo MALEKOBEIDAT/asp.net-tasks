@@ -16,7 +16,6 @@ namespace state_Mangment_Tasks
             {
 
                 TextBox1.Text = Request.Cookies["cookfilee"]["UserName"];
-                TextBox2.Text = Request.Cookies["cookfilee"]["Password"];
 
             }
 
