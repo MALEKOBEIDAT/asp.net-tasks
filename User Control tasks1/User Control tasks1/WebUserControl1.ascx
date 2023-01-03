@@ -3,7 +3,7 @@
 
 <style type="text/css">
     .auto-style1 {
-        margin-right: 61px;
+        margin-right: 21px;
     }
 </style>
 
@@ -35,24 +35,25 @@
 
 <div id="results" runat="server" visible="false">
     <h1>Your Opinion Is Important</h1>
+
     <div class="progress">
-        <div class="progress-bar" role="progressbar"  aria-valuemin="0" aria-valuemax="100" id="excellent" runat="server" ></div>
+        <div class="progress-bar bg-success" role="progressbar"  aria-valuemin="0" aria-valuemax="100" id="excellent" runat="server" ></div>
     </div>
     <br />
     <div class="progress">
-        <div class="progress-bar" role="progressbar"  aria-valuemin="0" aria-valuemax="100" id="vgood" runat="server" ></div>
+        <div class="progress-bar bg-success" role="progressbar"  aria-valuemin="0" aria-valuemax="100" id="vgood" runat="server" ></div>
     </div>
     <br />
     <div class="progress">
-        <div class="progress-bar" role="progressbar"  aria-valuemin="0" aria-valuemax="100" id="good" runat="server" ></div>
+        <div class="progress-bar bg-success" role="progressbar"  aria-valuemin="0" aria-valuemax="100" id="good" runat="server" ></div>
     </div>
     <br />
     <div class="progress">
-        <div class="progress-bar" role="progressbar"  aria-valuemin="0" aria-valuemax="100" id="fair" runat="server" ></div>
+        <div class="progress-bar bg-success" role="progressbar"  aria-valuemin="0" aria-valuemax="100" id="fair" runat="server" ></div>
     </div>
     <br />
     <div class="progress">
-        <div class="progress-bar" role="progressbar"  aria-valuemin="0" aria-valuemax="100" id="poor" runat="server" ></div>
+        <div class="progress-bar bg-success" role="progressbar"  aria-valuemin="0" aria-valuemax="100" id="poor" runat="server" ></div>
     </div>
 
 
