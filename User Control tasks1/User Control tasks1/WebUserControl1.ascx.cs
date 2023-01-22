@@ -21,7 +21,9 @@ namespace User_Control_tasks1
 
                 SqlConnection con = new SqlConnection("data source= DESKTOP-SAVUMCP\\SQLEXPRESS; database=Vote; integrated security=SSPI");
                 SqlCommand cmd = new SqlCommand("select * from VoteDetail", con);
+
                 con.Open();
+                
                 SqlDataReader sdr = cmd.ExecuteReader();
                 double excellent = 0;
                 double vgood = 0;
@@ -86,22 +88,25 @@ namespace User_Control_tasks1
         protected void Button1_Click1(object sender, EventArgs e)
         {
 
-            if (!IsPostBack) { 
             SqlConnection con = new SqlConnection("data source= DESKTOP-SAVUMCP\\SQLEXPRESS; database=Vote; integrated security=SSPI");
             SqlCommand com = new SqlCommand($"insert into VoteDetail values('{RadioButtonList1.SelectedValue}')", con);
             con.Open();
             com.ExecuteNonQuery();
             con.Close();
            
-            }
+            
             HttpCookie cookie = new HttpCookie("VoteFile");
+
             cookie.Values["VoteFile"] = "voted";
+
             cookie.Expires = DateTime.Now.AddDays(10);
 
-
             Response.Cookies.Add(cookie);
+
+
             radio.Visible = false;
             results.Visible = true;
+
             SqlConnection con2 = new SqlConnection("data source= DESKTOP-SAVUMCP\\SQLEXPRESS; database=Vote; integrated security=SSPI");
 
 
@@ -164,6 +169,7 @@ namespace User_Control_tasks1
             this.poor.Attributes.Add("aria-valuenow", ((poor / count) * 100).ToString());
             this.poor.Attributes.Add("style", $"width:{(poor / count) * 100}%");
             this.poor.InnerHtml = $"Poor {Math.Round((poor / count) * 100),2}%";
+            Response.Redirect("WebForm1.aspx");
             
         }
     }
